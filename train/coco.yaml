@@ -1,0 +1,16 @@
+# COCO 2017 dataset http://cocodataset.org
+
+data:
+  dataset_name: coco
+  
+  train_set: /home/mindspore/work/yolo/images/images
+  label_set: /home/mindspore/work/yolo/label_txt
+  val_set: /home/mindspore/work/yolo/images/images     # 验证集路径（核心：添加该字段）
+
+  nc: 2
+
+  # class names
+  names: [ 'OK', 'palm' ]
+
+  train_transforms: []
+  test_transforms: []
