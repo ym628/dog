@@ -7,7 +7,7 @@ dog
   ├── control #机械狗烧录代码
   ├── demo #香橙派运行机械狗
   ├── train #追踪模型训练
-  └──README.md #
+  └── README.md #
 ```
 
 
