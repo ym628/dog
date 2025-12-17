@@ -9,7 +9,8 @@ train
 ├── coco.yaml	#配置数据集及训练种类
 ├── export.py	#模型转换脚本
 ├── hyp.scratch.tiny.yaml	#设置超参数
-├── predict.py	#推理脚本
+├── mslite_predict.py	#MindIR模型推理脚本
+├── predict.py	#ckpt模型推理脚本
 ├── train.py	#训练的启动代码
 └──yolov7-tiny.yaml #配置训练参数
 ```
