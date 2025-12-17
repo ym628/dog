@@ -32,7 +32,7 @@ dog
 
 ## 控制与运动部分
 
-机械狗的运动控制部分的实现原理图如[图1](https://www.hiascend.com/document/detail/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application Cases/mdadg/mdadg_0004.html#ZH-CN_TOPIC_0000001698579689__fig1081703063911)所示：
+机械狗的运动控制部分的实现原理图如图1所示：
 
 **图1** 机械狗运动控制原理图
 ![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001663795214.png)
@@ -54,7 +54,7 @@ dog
 
 ## 锁定追踪部分
 
-机械狗的锁定追踪部分的时序图如[图1](https://www.hiascend.com/document/detail/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application Cases/mdadg/mdadg_0006.html#ZH-CN_TOPIC_0000001698579697__fig167949134018)、[图2](https://www.hiascend.com/document/detail/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application Cases/mdadg/mdadg_0006.html#ZH-CN_TOPIC_0000001698579697__fig216418211412)和[图3](https://www.hiascend.com/document/detail/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application Cases/mdadg/mdadg_0006.html#ZH-CN_TOPIC_0000001698579697__fig223613525410)所示：
+机械狗的锁定追踪部分的时序图如图1、图2和图3所示：
 
 **图1** 机械狗锁定追踪时序图1
 ![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001716066033.png)
