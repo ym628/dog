@@ -25,7 +25,12 @@ demo
 ## 环境部署
 模型推理使用MindSpore Lite  ，需部署MindSpore Lite环境  
 参考链接：https://www.mindspore.cn/lite/docs/zh-CN/r2.6.0/mindir/runtime_python.html
-
+### 运行环境
+```
+MindSpore 2.6.0
+CANN 8.1 RC 1
+Python 3.9.2
+```
 查询开发板底层架构
 ```
 uname -m
