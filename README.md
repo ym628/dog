@@ -63,6 +63,7 @@ dog
 ![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001668106754.png)
 
 **图3** 机械狗锁定追踪时序图3
+
 ![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001716147201.png)
 
 1. 在启动主程序后，首先进行摄像头和共享内存的初始化，拉流后在运动控制器端初始化，获取STM32和ESP32的端口信息。
@@ -99,26 +100,29 @@ dog
 
 
 ### 组装步骤
-首先将机械狗裸机平放在地面上，然后将3D打印好的三个支撑板用单头六角铜柱和防松螺母固定在机械狗的裸机上平面上，具体的位置如图1 安装固定所示：
+首先将机械狗裸机平放在地面上，然后将3D打印好的三个支撑板用单头六角铜柱和防松螺母固定在机械狗的裸机上平面上，具体的位置如图1所示：
+
 图1 安装固定
-![image.png](https://raw.gitcode.com/user-images/assets/8737315/882d673b-0f3b-43a7-a81c-6e8d78c0d34c/image.png 'image.png')
+![image.png](https://raw.gitcode.com/user-images/assets/8737315/882d673b-0f3b-43a7-a81c-6e8d78c0d34c/image.png 'image.png')                                                                                      
 从上到下依次为摄像头承载板、开发板承载板以及电池仓，按照图中的螺丝与单头螺柱位置固定即可。
 
 将电源放入到电池仓中，使用电池挡板固定，如图2所示：
+
 图2 安装电源
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/a35c575a-015b-4e86-b44a-1cef10de1a0a/image.png 'image.png')
-将开发者套件从底板上拆下并固定到3D打印出来的开发板承载板上，如图3 固定开发板所示：
+将开发者套件从底板上拆下并固定到3D打印出来的开发板承载板上，如图3 固定开发板所示：    
 图3 固定开发板
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/4d733c51-c019-46f3-a45c-bcedf7cf5798/image.png 'image.png')
-将两轴云台上原有的普通摄像头拆下，替换上无畸变的广角摄像头模组，再将云台安装到摄像头承载板上，如图4 安装广角摄像头模组所示：
+将两轴云台上原有的普通摄像头拆下，替换上无畸变的广角摄像头模组，再将云台安装到摄像头承载板上，如图4 所示：
+
 图4 安装广角摄像头模组
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/fdd5499a-08fb-48ef-a991-90f2be50d9a2/image.png 'image.png')
 其中上半部分的舵机连接到ESP32上的26号接口，棕色线接地靠近5V一侧，下半部分的舵机连接到ESP32上的25号接口，棕色线接地靠近5V一侧。
-
 总体的接线方式如图5所示：
+
 图5 接线图
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/a921c25c-dc5a-4d84-ab0d-19afbed115fc/image.png 'image.png')
-将各个电源线连接好后，需要使用一根Micro USB数据线连接到机械狗内部的主控F405一侧的MicroUSB端口，另一端连接到插到开发板上的USB扩展坞上，再将USBWifi模块插到开发板的USB接口上，将USB摄像头和ESP32接到USB扩展坞上，即可完成接线。
+将各个电源线连接好后，需要使用一根Micro USB数据线连接到机械狗内部的主控F405一侧的MicroUSB端口，另一端连接到插到开发板上的USB扩展坞上，再将USBWifi模块插到开发板的USB接口上，将USB摄像头和ESP32接到USB扩展坞上，即可完成接线。                          
 图6 接线图
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/3b56f92d-4d6b-42c1-92bc-e39a8a9685d2/image.png 'image.png')
 
