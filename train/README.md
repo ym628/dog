@@ -6,21 +6,12 @@ mindyolo：[GitHub - mindspore-lab/mindyolo: A toolbox of yolo models and algori
 
 ```
 train
-├── main.py	#demo运行总入口
-├── src
-│	 ├── actions #机械狗基础与复杂运动代码。
-│	 ├── models #推理模型相关代码。
-│	 ├── scenes #机械狗预设场景相关代码。
-│	 └── utils #工具类python文件
-├── weights #模型权重文件
-│	 ├── hand_det.mindir #mindir格式手势模型权重
-│	 ├── hand_det.om #om格式手势模型权重
-│	 ├── yolo.mindir #mindir格式人体模型权重
-│	 └── yolo.om #om格式人体模型权重
-├── msliteyolo5.py	#摄像头进行人体推理
-├── msliteyolo7.py	#摄像头进行手势推理
-└──requirements.txt #demo样例所需依赖
-
+├── coco.yaml	#配置数据集及训练种类
+├── export.py	#模型转换脚本
+├── hyp.scratch.tiny.yaml	#设置超参数
+├── predict.py	#推理脚本
+├── train.py	#训练的启动代码
+└──yolov7-tiny.yaml #配置训练参数
 ```
 
 ##  **简介**
