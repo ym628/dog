@@ -124,16 +124,13 @@ python3 main.py --mode=tracking
 ```
 
 初始化完成回显如下所示：
-
-![](D:\shujuji\最终版\修改cv_u，可以正常追踪，使用mslite\READMEimage\chushihua.png)
+![屏幕截图 2025-12-17 114824.png](https://raw.gitcode.com/user-images/assets/8737315/894b753d-d528-4880-9fe3-6000808277a2/屏幕截图_2025-12-17_114824.png '屏幕截图 2025-12-17 114824.png')
 
 在机械狗面前摆出“OK”的手势，等待开发者套件远程登录界面回显中出现**locked**，即表示已经锁定了追踪的目标，接下来就可以缓慢移动，机械狗就会跟随目标了。
-
-![](D:\shujuji\最终版\修改cv_u，可以正常追踪，使用mslite\READMEimage\locked.png)
+![005d94a4-aea3-4d54-a5b8-a619e794f60c.png](https://raw.gitcode.com/user-images/assets/8737315/501835b0-8b24-44d1-b49f-f82c1300258a/005d94a4-aea3-4d54-a5b8-a619e794f60c.png '005d94a4-aea3-4d54-a5b8-a619e794f60c.png')
 
 解除追踪锁定，可参见以下两种方式：
 
 - 面对机械狗，手掌对向摄像头，五指张开，持续3s左右，开发者套件远程登录界面回显中出现**unlock**字样，即表示解除了锁定，机械狗会保持静止状态。
 - 快速脱离机械狗的视线超过10s左右，机械狗会认为丢失目标，开发者套件远程登录界面回显中出现**unlock**字样，即表示解除了锁定，机械狗会保持静止状态。
-
-![](D:\shujuji\最终版\修改cv_u，可以正常追踪，使用mslite\READMEimage\unlock.png)
+![81c728b180ee251db1da66e523d89fb4.png](https://raw.gitcode.com/user-images/assets/8737315/630d631f-6b72-43ed-a724-90093c1eda80/81c728b180ee251db1da66e523d89fb4.png '81c728b180ee251db1da66e523d89fb4.png')
