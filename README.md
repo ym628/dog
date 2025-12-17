@@ -117,11 +117,13 @@ dog
 
 图4 安装广角摄像头模组
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/fdd5499a-08fb-48ef-a991-90f2be50d9a2/image.png 'image.png')
+
 其中上半部分的舵机连接到ESP32上的26号接口，棕色线接地靠近5V一侧，下半部分的舵机连接到ESP32上的25号接口，棕色线接地靠近5V一侧。
 总体的接线方式如图5所示：
 
 图5 接线图
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/a921c25c-dc5a-4d84-ab0d-19afbed115fc/image.png 'image.png')
+
 将各个电源线连接好后，需要使用一根Micro USB数据线连接到机械狗内部的主控F405一侧的MicroUSB端口，另一端连接到插到开发板上的USB扩展坞上，再将USBWifi模块插到开发板的USB接口上，将USB摄像头和ESP32接到USB扩展坞上，即可完成接线。                          
 图6 接线图
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/3b56f92d-4d6b-42c1-92bc-e39a8a9685d2/image.png 'image.png')
