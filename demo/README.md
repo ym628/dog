@@ -1,3 +1,5 @@
+MindSpore：https://www.mindspore.cn/  
+MindSpore Lite：https://www.mindspore.cn/lite/
 ## 代码部分
 
 本项目涉及机械狗控制底层代码，简单运动和复杂运动代码，各类工具以及多个推理模型，工程目录如下图所示：
@@ -20,6 +22,57 @@ demo
 └──requirements.txt #demo样例所需依赖
 
 ```
+## 环境部署
+模型推理使用MindSpore Lite  ，需部署MindSpore Lite环境  
+参考链接：https://www.mindspore.cn/lite/docs/zh-CN/r2.6.0/mindir/runtime_python.html
+
+查询开发板底层架构
+```
+uname -m
+```
+![c05ac328-06c8-4850-bf29-4b53abce30a4.png](https://raw.gitcode.com/user-images/assets/8737315/f9c589ca-02aa-4dd3-9213-e8f2cb6e7b9b/c05ac328-06c8-4850-bf29-4b53abce30a4.png 'c05ac328-06c8-4850-bf29-4b53abce30a4.png')
+### 下载MindSpore Lite Python接口开发库
+下载链接:https://www.mindspore.cn/lite/docs/zh-CN/r2.7.1/use/downloads.html#2-6-0 
+
+操作系统根据上述命令进行查看，进行对应版本下载
+
+![ff21f775-725a-4f5a-ba0d-3727cef3aba6.png](https://raw.gitcode.com/user-images/assets/8737315/f159d5e4-d23f-42a4-ac6f-986b9b3171df/ff21f775-725a-4f5a-ba0d-3727cef3aba6.png 'ff21f775-725a-4f5a-ba0d-3727cef3aba6.png')
+### 安装MindSpore Lite Python接口开发库
+```
+pip install mindspore_lite-2.6.0-cp39-cp39-linux_aarch64.whl
+```
+![3da9f381407f694805f370f95147ec76.png](https://raw.gitcode.com/user-images/assets/8737315/1f5f60ff-b662-4e79-9ae7-df0ab56923df/3da9f381407f694805f370f95147ec76.png '3da9f381407f694805f370f95147ec76.png')
+安装成功
+
+### 下载MindSpore Lite开发库
+![image.png](https://raw.gitcode.com/user-images/assets/8737315/2ea1416b-4094-4558-9788-81ecb449d16b/image.png 'image.png')
+
+### 解压MindSpore Lite开发库
+```
+tar -zxvf mindspore-lite-2.6.0-linux-aarch64.tar.gz
+```
+![ef759ca1-33f6-4a6f-8492-6a5ab8a903ec.png](https://raw.gitcode.com/user-images/assets/8737315/911e38de-de04-49a5-a504-99e3ac93a75f/ef759ca1-33f6-4a6f-8492-6a5ab8a903ec.png 'ef759ca1-33f6-4a6f-8492-6a5ab8a903ec.png')
+### 设置MindSpore Lite 根目录环境变量：
+```
+export LITE_HOME=[path to mindspore_lite_xxx]
+export LD_LIBRARY_PATH=$LITE_HOME/runtime/lib:$LITE_HOME/tools/converter/lib:$LD_LIBRARY_PATH
+export PATH=$LITE_HOME/tools/converter/converter:$LITE_HOME/tools/benchmark:$PATH
+export Convert=$LITE_HOME/tools/converter/converter/converter_lite
+```
+注意：需要结合自身目录进行修改
+
+### Convert(可选)
+指导文档:https://www.mindspore.cn/lite/docs/zh-CN/r2.7.1/mindir/converter_tool.html
+
+作用：模型提速，从MindIR（任何平台都能用）转换为mindspore专属的MindIR（针对昇腾有专属的优化）对环境进行优化
+
+效果：启动推理速度更快
+```
+$Convert --fmk=MINDIR --modelFile=yolov7-tiny.mindir --outputFile=Converty7 --saveType=MINDIR --optimize=ascend_oriented
+```
+![a65ba35f-9063-4205-999e-2b38f2e31991.png](https://raw.gitcode.com/user-images/assets/8737315/94e12782-6cb9-4ee9-a5ec-72cd7771ce04/a65ba35f-9063-4205-999e-2b38f2e31991.png 'a65ba35f-9063-4205-999e-2b38f2e31991.png')
+
+
 
 ## 手动控制机械狗运动
 
