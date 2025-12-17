@@ -23,7 +23,7 @@ dog
 **图1** 机械狗外观结构图
 ![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001650180870.png)
 
-## 功能与原理介绍
+### 功能与原理介绍
 
 **图1** 功能原理图
 ![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001663635202.png)
