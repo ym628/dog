@@ -20,7 +20,6 @@ control
 图1 获取软件
 ![f0c828ec8c51fb9952eed6083fa1f9a5.png](https://raw.gitcode.com/user-images/assets/8737315/b74e02e8-7838-42c4-b690-bf59e34af75f/f0c828ec8c51fb9952eed6083fa1f9a5.png 'f0c828ec8c51fb9952eed6083fa1f9a5.png')
 2. 按照默认配置通过注册机安装Keil uVision5软件及工具包。
-
 3. 打开Keil uVision5软件，单击工具栏![image.png](https://raw.gitcode.com/user-images/assets/8737315/84c71398-4bfc-4aa8-a569-dd13f5ce99d2/image.png 'image.png')按钮，进入包管理工具。
 
 图2 包管理工具界面
