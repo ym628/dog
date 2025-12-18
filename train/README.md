@@ -2,6 +2,8 @@
 
 mindyolo：[GitHub - mindspore-lab/mindyolo: A toolbox of yolo models and algorithms based on MindSpore](https://github.com/mindspore-lab/mindyolo/)
 
+昇思大模型平台[](https://xihe.mindspore.cn/)：https://xihe.mindspore.cn/
+
 
 
 ```
