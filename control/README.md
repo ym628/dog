@@ -19,13 +19,15 @@ control
 
 图1 获取软件
 ![f0c828ec8c51fb9952eed6083fa1f9a5.png](https://raw.gitcode.com/user-images/assets/8737315/b74e02e8-7838-42c4-b690-bf59e34af75f/f0c828ec8c51fb9952eed6083fa1f9a5.png 'f0c828ec8c51fb9952eed6083fa1f9a5.png')
+
 2. 按照默认配置通过注册机安装Keil uVision5软件及工具包。
+
 3. 打开Keil uVision5软件，单击工具栏![image.png](https://raw.gitcode.com/user-images/assets/8737315/84c71398-4bfc-4aa8-a569-dd13f5ce99d2/image.png 'image.png')按钮，进入包管理工具。
 
 图2 包管理工具界面
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/f10605e2-ec09-4d39-b6ea-e9a5c1adc1ed/image.png 'image.png')
 
-4.在搜索框中搜索STM32F1 Series与STM32F4 Series并安装所有包。
+4. 在搜索框中搜索STM32F1 Series与STM32F4 Series并安装所有包。
 
 图3 搜索包
 
@@ -35,7 +37,9 @@ control
 
 图4 安装包
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/fcbaab2a-f444-4135-bf03-58e486d6c759/image.png 'image.png')
+
 6. 在PC使用Keil uVision5选择工具栏“File > Open”，打开文件“control\stm32_code\QuadrupedF405\USER”目录下的“QuadrupedF405.uvprojx”项目文件，即可进入到对应的界面，如图6所示。
+
 图5 打开文件
 
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/9954726e-bf76-4e8e-a7da-122ae998366c/image.png 'image.png')
@@ -44,7 +48,8 @@ control
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/f94899a8-8769-4142-a601-14388fde5921/image.png 'image.png')
 
 
-说明
+<span style="color:#e60000;">说明:</span>
+
 出现缺少头文件提示时，选择工具栏“Project > Options for Target ...”，请选择C/C++，为Project添加头文件的include path路径（路径不能出现中文字符）
 
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/fb594fe2-4df0-4302-b500-8c132df9f0b2/image.png 'image.png')
