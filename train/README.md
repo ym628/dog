@@ -1,38 +1,40 @@
-# 模型训练
+# 模型训练指南
+本文档详细介绍了如何使用 MindYolo 框架训练手势识别模型，并将其部署到昇腾开发板进行推理。
 
-mindyolo：[GitHub - mindspore-lab/mindyolo: A toolbox of yolo models and algorithms based on MindSpore](https://github.com/mindspore-lab/mindyolo/)
+[mindyolo](https://github.com/mindspore-lab/mindyolo/)：基于 MindSpore 的 YOLO 算法工具箱
 
-昇思大模型平台[](https://xihe.mindspore.cn/)：https://xihe.mindspore.cn/
+[昇思大模型平台](https://xihe.mindspore.cn/)：提供在线训练与开发环境
 
 
+## 训练代码结构
 
 ```
 train
-├── coco.yaml	#配置数据集及训练种类
-├── export.py	#模型转换脚本
-├── hyp.scratch.tiny.yaml	#设置超参数
-├── mslite_predict.py	#MindIR模型推理脚本
-├── predict.py	#ckpt模型推理脚本
-├── train.py	#训练的启动代码
-└──yolov7-tiny.yaml #配置训练参数
+├── coco.yaml	#数据集配置：类别定义与数据路径
+├── export.py	#模型格式转换脚本（ckpt → MindIR）
+├── hyp.scratch.tiny.yaml	#超参数配置文件（学习率、优化器等）
+├── mslite_predict.py	#MindIR 格式模型推理脚本
+├── predict.py	#ckpt 格式模型推理脚本
+├── train.py	#模型训练主程序
+├── yolov7-tiny.yaml #YOLOv7-tiny 网络结构与训练参数配置
+└── README.md #描述文件
 ```
 
-##  **简介**
 
-使用MindYolo进行模型训练.
+## **训练环境配置**
 
-## **运行环境**
+计算资源: 昇思大模型平台
 
-华为云model arts
+AI 处理器:昇腾910B1
 
-MindSpore 2.5
+运行内存:192GB
 
-昇腾910B4
+存储空间:60G存储
 
-硬盘：60G存储
+框架版本:MindSpore 2.5
 
-## **安装依赖**
-
+## **依赖安装步骤**
+1.克隆 MindYolo 仓库并安装到当前环境
 ```shell
 # 克隆 mindyolo 仓库
 git clone https://github.com/mindspore-lab/mindyolo.git
@@ -44,68 +46,105 @@ pip install -r requirements.txt
 # 安装 mindyolo 到当前环境
 pip install -e .
 ```
-
+2.安装 MindSpore 框架
 ```shell
 pip install mindspore==2.5.0
 ```
 
-## **配置文件**
+## **配置文件详解**
 
-本训练采用单卡训练，以下为配置文件
+### 数据集配置 (coco.yaml)
+根据手势识别任务需求，修改以下参数：
+```yaml
+nc: 2                          # 类别数量（两种手势）
+names: ['ok', 'palm']         # 类别名称列表
+```
+### 训练配置 (yolov7-tiny.yaml)
+- 单卡训练配置
 
-train.py是训练的启动代码
+- 批次大小设置
 
-hyp.scratch.tiny.yaml是设置超参数
+- 训练轮数设定
 
-yolov7-tiny.yaml配置训练参数
+- 优化器选择
+### 超参数配置 (hyp.scratch.tiny.yaml)
+- 学习率调度策略
 
-coco.yaml配置数据集及训练种类，nc为数据集的种类，names为数据集的名称，这里因为我数据集里只有ok和palm手势所以我修改为：nc:2，names:['ok','palm']
+- 权重衰减系数
 
-数据集来源：[数据集-OpenDataLab](https://opendatalab.org.cn/sdf/Dataset/tree/main)
+- 数据增强参数
 
-## **启动训练**
+- 损失函数权重
+## 模型训练流程
 
+
+### **启动训练**
+执行以下命令开始模型训练：
 ```
 python train.py --config ./yolov7-tiny.yaml
 ```
 ![066d904eb9c5fd5b4332fd40a5bb026c.png](https://raw.gitcode.com/user-images/assets/8737315/5379c432-6b54-4e87-a991-e1bddb80da62/066d904eb9c5fd5b4332fd40a5bb026c.png '066d904eb9c5fd5b4332fd40a5bb026c.png')
-训练成功
+训练成功提示：终端将显示训练进度、损失值变化和评估指标。
 
+**训练监控**
+- 实时显示训练损失曲线
 
-## **模型测试**
+- 定期输出模型评估结果
 
-predict.py是模型推理脚本
+- 自动保存最佳模型权重
 
-启动模型推理脚本
+### **模型验证与测试**
+1.使用 ckpt 权重进行推理
 
-```
+```python
 python predict.py --config ./yolov7-tiny.yaml --weight=./EMA_yolov7-299_12.ckpt --image_path ./yolo/images/000016.jpg
 ```
+**参数说明：**
 
---config后面是yolov7的yaml文件
+--config: YOLOv7 配置文件路径
 
---weight 是训练后模型权重
+--weight: 训练得到的模型权重文件
 
---image_path 要识别的图片
+--image_path : 测试图片路径
 ![34e04c0a2a566c0ae466171f87f48bee.jpg](https://raw.gitcode.com/user-images/assets/8737315/c9b0917a-2e6b-4a11-857c-c65063085c64/34e04c0a2a566c0ae466171f87f48bee.jpg '34e04c0a2a566c0ae466171f87f48bee.jpg')
-推理完成
-## ckpt转MindIR
-将上文得到的ckpt模型转化为MindIR格式
-```
+推理完成，模型可用
+
+2.模型格式转换（ckpt → MindIR）
+
+将训练得到的 ckpt 模型转换为 MindSpore Lite 可用的 MindIR 格式：
+```python
 python ./export.py --config ./yolov7-tiny.yaml --weight EMA_yolov7-tiny-50_1250.ckpt --file_format MINDIR --device_target Ascend
 ```
 ![092de955-bb3a-4726-a168-43627f1f2050.png](https://raw.gitcode.com/user-images/assets/8737315/aa2f2574-2d3a-4d67-9ab3-de531895c5fb/092de955-bb3a-4726-a168-43627f1f2050.png '092de955-bb3a-4726-a168-43627f1f2050.png')
-转换完成
-## MindIR模型测试
-```
+转换成功提示：生成 yolov7-tiny.mindir 模型文件。
+
+
+3.MindIR 模型推理测试
+
+验证转换后的 MindIR 模型在目标设备上的推理性能：
+```python
 python ./mslite_predict.py --mindir_path yolov7-tiny.mindir --config ./yolov7-tiny.yaml --image_path ./yolo/images/images/000005.jpg
 ```
 ![image.png](https://raw.gitcode.com/user-images/assets/8737315/8f0be699-1705-405a-bd2d-3279fc13e523/image.png 'image.png')
-模型正常可用
+模型推理测试正常
+## 数据集准备
 
+本项目使用的训练数据集来自：[数据集-OpenDataLab](https://opendatalab.org.cn/sdf/Dataset/tree/main)
+### 数据预处理
+1. 下载并解压数据集
 
+3. 转换为 COCO 标注格式
 
+5. 划分训练集与验证集
 
+7. 生成数据索引文件
 
+## 训练效果评估
+### 性能指标
+1. 模型推理速度（FPS）
 
+3. 手势识别准确率
 
+5. 模型文件大小
+
+7. 内存占用情况
