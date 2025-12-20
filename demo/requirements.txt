@@ -2,4 +2,3 @@ pyserial
 filelock
 numpy
 opencv-python
-torch
