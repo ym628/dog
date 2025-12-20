@@ -1,6 +1,7 @@
-# 模型训练指南
-本文档详细介绍了如何使用 MindYolo 框架训练手势识别模型，并将其部署到昇腾开发板进行推理。
+<span style="font-size:20px;">
+本文档详细介绍了如何使用 MindYolo 框架训练手势识别模型，并直接下载人体模型，最终需将两者部署到昇腾开发板进行推理。</span>
 
+# YOLOv7手势模型训练指南
 [mindyolo](https://github.com/mindspore-lab/mindyolo/)：基于 MindSpore 的 YOLO 算法工具箱
 
 [昇思大模型平台](https://xihe.mindspore.cn/)：提供在线训练与开发环境
@@ -25,7 +26,7 @@ train
 
 计算资源: 昇思大模型平台
 
-AI 处理器:昇腾910B1
+AI 处理器:昇腾910B
 
 运行内存:192GB
 
@@ -148,3 +149,8 @@ python ./mslite_predict.py --mindir_path yolov7-tiny.mindir --config ./yolov7-ti
 5. 模型文件大小
 
 7. 内存占用情况
+
+# YOLOv5预训练模型下载指南
+[MindSporeYolo](https://github.com/mindspore-lab/mindyolo/tree/master/deploy)：提供开箱即用的 MindIR 格式预训练目标检测模型（支持 YOLOv5/YOLOv8 等主流架构），支持免转换直接部署至昇腾 AI 处理器（Ascend 310/910）与支持 MindSpore Lite 的移动/边缘设备。
+
+![ee4e72e4f062673e9a2d231ca1b20cd1.jpeg](https://raw.gitcode.com/user-images/assets/8737315/99402944-fca8-4d53-9ad6-fc46062993f1/ee4e72e4f062673e9a2d231ca1b20cd1.jpeg 'ee4e72e4f062673e9a2d231ca1b20cd1.jpeg')
