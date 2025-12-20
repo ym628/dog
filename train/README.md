@@ -1,5 +1,5 @@
 <span style="font-size:20px;">
-本文档详细介绍了如何使用 MindYolo 框架训练手势识别模型，并直接下载人体模型，最终需将两者部署到昇腾开发板进行推理。</span>
+本文档详细介绍了如何使用 MindYolo 框架训练手势识别模型，并直接下载预训练的人体检测模型，最终需将两者部署到昇腾开发板进行推理。</span>
 
 # YOLOv7手势模型训练指南
 [mindyolo](https://github.com/mindspore-lab/mindyolo/)：基于 MindSpore 的 YOLO 算法工具箱
