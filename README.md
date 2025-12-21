@@ -22,7 +22,7 @@
 4. 摄像头云台连接一块ESP32下位机控制摄像头的移动，再通过USB扩展坞将所有的线连接到开发板上，再使用Wifi模块连接到开发板上。
 
 **图1** 机械狗外观结构图
-![img](https://www.hiascend.com/doc_center/source/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Cases/mdadg/figure/zh-cn_image_0000001650180870.png)
+![fb6f8d9670eb9df44511e18e3fb662f1.png](https://raw.gitcode.com/user-images/assets/8737315/f62e4a7b-6957-41f0-9857-75772336139e/fb6f8d9670eb9df44511e18e3fb662f1.png 'fb6f8d9670eb9df44511e18e3fb662f1.png')
 
 ### 功能与原理介绍
 
