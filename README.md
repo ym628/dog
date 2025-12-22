@@ -1,6 +1,6 @@
 # 机械狗
 <span style="font-size:24px;">   本机器狗创新应用深度集成昇腾全栈 AI 技术生态，以昇思 MindSpore 全场景 AI 框架为核心底座，依托 MindYolo 套件在昇思大模型平台实现高效模型训练，搭配昇腾技术路线的香橙派 AIPro 开发板与 MindSpore Lite 轻量化推理引擎，构建起 "训推一体" 的闭环方案。全栈工具链协同发力，为机器狗智能应用落地提供坚实技术支撑。</span>
-![MindSpore机械狗.png](https://raw.gitcode.com/user-images/assets/8737315/170d823a-5157-4615-911b-b2e474af137b/MindSpore机械狗.png 'MindSpore机械狗.png')
+![MindSpore机械狗.png](https://raw.gitcode.com/user-images/assets/8737315/107f8eea-07a5-4a09-97ab-365f7e667726/72ecda98500e2e9293e57bbf1510cd0c.png '72ecda98500e2e9293e57bbf1510cd0c.png')
 ##  代码结构
 本项目涉及机械狗控制底层代码，简单运动和复杂运动代码，各类工具以及多个推理模型，工程目录如下图所示：
 ```
@@ -22,7 +22,7 @@
 4. 摄像头云台连接一块ESP32下位机控制摄像头的移动，再通过USB扩展坞将所有的线连接到开发板上，再使用Wifi模块连接到开发板上。
 
 **图1** 机械狗外观结构图
-![fb6f8d9670eb9df44511e18e3fb662f1.png](https://raw.gitcode.com/user-images/assets/8737315/f62e4a7b-6957-41f0-9857-75772336139e/fb6f8d9670eb9df44511e18e3fb662f1.png 'fb6f8d9670eb9df44511e18e3fb662f1.png')
+![机械狗外观结构.png](https://raw.gitcode.com/user-images/assets/8737315/f62e4a7b-6957-41f0-9857-75772336139e/fb6f8d9670eb9df44511e18e3fb662f1.png 'fb6f8d9670eb9df44511e18e3fb662f1.png')
 
 ### 功能与原理介绍
 
