@@ -84,7 +84,7 @@ names: ['ok', 'palm']         # 类别名称列表
 ```
 python train.py --config ./yolov7-tiny.yaml
 ```
-![066d904eb9c5fd5b4332fd40a5bb026c.png](https://raw.gitcode.com/user-images/assets/8737315/5379c432-6b54-4e87-a991-e1bddb80da62/066d904eb9c5fd5b4332fd40a5bb026c.png '066d904eb9c5fd5b4332fd40a5bb026c.png')
+![image.png](https://raw.gitcode.com/user-images/assets/8737315/528c2312-027b-43f0-a68c-093934f54bb3/image.png 'image.png')
 训练成功提示：终端将显示训练进度、损失值变化和评估指标。
 
 **训练监控**
