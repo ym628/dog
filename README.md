@@ -22,8 +22,8 @@
 4. 摄像头云台连接一块ESP32下位机控制摄像头的移动，再通过USB扩展坞将所有的线连接到香橙派开发板。
 
 **图1** 机械狗外观结构图
-![机械狗外观结构图.png](https://raw.gitcode.com/user-images/assets/8737315/d352b5ac-aeb8-4c78-bb77-d1df8aa8ac76/IMG_20251221_212459.png 'IMG_20251221_212459.png')
 <img width="4096" height="2838" alt="image" src="https://github.com/user-attachments/assets/1f04ccd1-63d1-4e27-a014-c8a0fd8ba370" />
+
 
 
 ### 软件结构
