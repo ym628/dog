@@ -23,6 +23,8 @@
 
 **图1** 机械狗外观结构图
 ![机械狗外观结构图.png](https://raw.gitcode.com/user-images/assets/8737315/d352b5ac-aeb8-4c78-bb77-d1df8aa8ac76/IMG_20251221_212459.png 'IMG_20251221_212459.png')
+<img width="4096" height="2838" alt="image" src="https://github.com/user-attachments/assets/1f04ccd1-63d1-4e27-a014-c8a0fd8ba370" />
+
 
 ### 软件结构
 本机械狗软件采用**分层解耦式架构设计**，深度融合昇腾全栈AI技术生态，构建起从“硬件驱动到应用落地”的完整技术链路，实现“训推一体、软硬协同”的智能闭环，具体分层及细节如下：
