@@ -144,7 +144,7 @@
 首先将机械狗裸机平放在地面上，然后将3D打印好的支撑板用单头六角铜柱和防松螺母固定在机械狗的裸机上平面上，具体的位置如图1所示：
 
 图1 安装固定
-![安装固定.png](https://raw.gitcode.com/user-images/assets/8737315/0485e19d-77e4-4552-be32-9f8ef9a95bd9/cf0eac73af366014a11de202f9ebf63f.png 'cf0eac73af366014a11de202f9ebf63f.png')                                                                               
+<img width="2838" height="4096" alt="image" src="https://github.com/user-attachments/assets/878e7f08-680f-42b6-9253-8d963a876bf9" />                                                                         
 从上到下依次为摄像头承载板、开发板承载板以及电池仓，按照图中的螺丝与单头螺柱位置固定即可。
 
 将电源放入到电池仓中，使用电池挡板固定，如图2所示：
